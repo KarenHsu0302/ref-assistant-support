@@ -1,68 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ref Assistant Support</title>
-
+    <title>Ref Assistant - Privacy & Support</title>
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            line-height: 1.7;
-            color:#333;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Microsoft JhengHei", sans-serif;
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
         }
-
-        h1,h2{
-            color:#111;
+        .lang-switch { text-align: right; margin-bottom: 20px; }
+        .lang-btn {
+            background: #fff; border: 1px solid #ddd; padding: 6px 14px;
+            border-radius: 20px; cursor: pointer; font-size: 14px;
         }
-
-        .box{
-            background:#f5f5f5;
-            padding:20px;
-            border-radius:10px;
-        }
+        .app-header { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 30px; }
+        .app-icon { width: 80px; height: 80px; border-radius: 18px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 12px; }
+        .app-title { font-size: 24px; font-weight: 700; margin: 0; }
+        h2 { font-size: 18px; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        p, li { font-size: 14px; color: #555; }
+        ul { padding-left: 20px; }
+        .box { background: #f8fafc; padding: 15px 20px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        [lang="zh"] .en-content { display: none; }
+        [lang="en"] .zh-content { display: none; }
     </style>
 </head>
-<body>
+<body lang="zh">
 
-    <h1>Ref Assistant</h1>
-
-    <p>
-        Ref Assistant is a mobile application designed to assist users with referee-related tools and functions.
-    </p>
-
-    <div class="box">
-        <h2>Support</h2>
-
-        <p>
-            If you have any questions or issues, please contact:
-        </p>
-
-        <p>
-            w24981270@gmail.com
-        </p>
+    <div class="lang-switch">
+        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
     </div>
 
-    <h2>Privacy Policy</h2>
+    <header class="app-header">
+        <img src="icon.png" alt="App Icon" class="app-icon" onerror="this.style.display='none';">
+        <h1 class="app-title">Ref Assistant</h1>
+    </header>
 
-    <p>
-        This application may use third-party services such as Google AdMob for advertising purposes.
-    </p>
+    <div class="box">
+        <h3 class="zh-content" style="margin:0 0 5px 0;">客戶支援 (Support)</h3>
+        <h3 class="en-content" style="margin:0 0 5px 0;">Support</h3>
+        <p class="zh-content" style="margin:0;">如有任何問題或需要協助，請聯絡：<a href="mailto:w24981270@gmail.com">w24981270@gmail.com</a></p>
+        <p class="en-content" style="margin:0;">If you have any questions or need support, please contact: <a href="mailto:w24981270@gmail.com">w24981270@gmail.com</a></p>
+    </div>
 
-    <p>
-        Third-party services may collect device information and usage data in accordance with their own privacy policies.
-    </p>
+    <h2 class="zh-content">隱私權政策</h2>
+    <h2 class="en-content">Privacy Policy</h2>
+    <p style="font-size:12px; color:#999; margin-top:-10px;">Effective: 2026-05-15</p>
 
-    <p>
-        The developer does not intentionally collect personally identifiable information from users.
-    </p>
+    <p class="zh-content">本應用程式（Ref Assistant）由 KarenHsu 作為免費軟體提供。本服務旨在按「現狀」提供使用。</p>
+    <p class="en-content">Ref Assistant is built by KarenHsu as a Free app and is provided "AS IS".</p>
 
-    <p>
-        By using this application, you agree to the collection and use of information as described in this policy.
-    </p>
+    <h3 class="zh-content" style="font-size:15px;">1. 資料收集與使用</h3>
+    <h3 class="en-content" style="font-size:15px;">1. Information Collection</h3>
+    <p class="zh-content">開發者不會主動收集或儲存您的任何個人識別資料。當您使用本 App 時，系統可能會自動記錄一般裝置資訊（如作業系統版本、使用時間等）以優化功能體驗。</p>
+    <p class="en-content">The developer does not collect any personally identifiable information. The app may automatically process basic technical data (such as OS version and usage time) to optimize functionality.</p>
 
+    <h3 class="zh-content" style="font-size:15px;">2. 第三方服務（廣告）</h3>
+    <h3 class="en-content" style="font-size:15px;">2. Third-Party Services</h3>
+    <p class="zh-content">本 App 整合了第三方廣告服務 <strong>Google AdMob</strong>。這些服務商可能會根據其自身的隱私權政策，收集您的裝置廣告識別碼或 IP 位址用以投放廣告。</p>
+    <p class="en-content">The app utilizes <strong>Google AdMob</strong> for advertising. This third-party provider may collect device identifiers or IP addresses in accordance with their own privacy policy.</p>
+    <ul>
+        <li><a href="https://support.google.com/admob/answer/6128543?hl=zh-Hant" target="_blank">Google AdMob Privacy Policy</a></li>
+    </ul>
+
+    <h3 class="zh-content" style="font-size:15px;">3. 兒童隱私與資料安全</h3>
+    <h3 class="en-content" style="font-size:15px;">3. Children & Security</h3>
+    <p class="zh-content">本服務不針對 13 歲以下兒童，亦不會故意收集兒童資料。我們承諾盡最大努力維護您的裝置數據安全性。</p>
+    <p class="en-content">This service does not address anyone under the age of 13. We use commercially acceptable means to protect your data, but remember no method is 100% secure.</p>
+
+    <h3 class="zh-content" style="font-size:15px;">4. 政策變更與同意</h3>
+    <h3 class="en-content" style="font-size:15px;">4. Consent & Changes</h3>
+    <p class="zh-content">當您開始使用本 App，即代表您同意本隱私權政策。本政策可能會不定期更新，變更將直接公佈於此頁面。</p>
+    <p class="en-content">By using the app, you agree to this policy. We may update this policy from time to time, and changes are effective immediately upon posting.</p>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body; const btn = document.getElementById('langBtn');
+            if (body.getAttribute('lang') === 'zh') {
+                body.setAttribute('lang', 'en'); btn.textContent = '中文';
+            } else {
+                body.setAttribute('lang', 'zh'); btn.textContent = 'English';
+            }
+        }
+    </script>
 </body>
 </html>
